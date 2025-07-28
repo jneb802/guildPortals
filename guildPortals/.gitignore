@@ -2,6 +2,12 @@
 bin/
 obj/
 
+Environment.props
+
+build.sh
+monitor-logs.sh
+rename-mod.sh
+
 # Log files
 logoutput.log
 
@@ -17,3 +23,5 @@ logoutput.log
 # Temporary files
 *.tmp
 *.temp 
+
+assembly_master

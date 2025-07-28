@@ -6,14 +6,14 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 
-namespace Template
+namespace guildPortals
 {
     [BepInPlugin(ModGUID, ModName, ModVersion)]
-    public class TemplatePlugin : BaseUnityPlugin
+    public class guildPortalsPlugin : BaseUnityPlugin
     {
-        private const string ModName = "Template";
+        private const string ModName = "guildPortals";
         private const string ModVersion = "1.0.0";
-        private const string Author = "modAuthorName";
+        private const string Author = "warpalicious";
         private const string ModGUID = Author + "." + ModName;
         private static string ConfigFileName = ModGUID + ".cfg";
         private static string ConfigFileFullPath = BepInEx.Paths.ConfigPath + Path.DirectorySeparatorChar + ConfigFileName;
@@ -24,7 +24,7 @@ namespace Template
 
         public void Awake()
         {
-            BepinexConfiguration.Instance.Config = Config;
+            BepinExConfiguration.Instance.Config = Config;
             Assembly assembly = Assembly.GetExecutingAssembly();
             HarmonyInstance.PatchAll(assembly);
             SetupWatcher();
